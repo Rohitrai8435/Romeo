@@ -7,6 +7,8 @@ const Trending=document.querySelector(".ri-apps-fill");
 const trending1=document.querySelector("#trending");
 const mystuff=document.querySelector(".ri-file-cloud-fill");
 const mystuff1=document.querySelector("#mystuff");
+const live=document.querySelector(".ri-live-line");
+const live1=document.querySelector("#liveside");
 
 var flag = 1;
 remenufill.addEventListener("click",function()
@@ -103,6 +105,31 @@ overlay.addEventListener("click",function()
 {
         mystuff1.style.left = "-100%";
         mystuff1.style.transition = "all cubic-bezier(0.165, 0.84, 0.44, 1) 1s";
+        
+})
+
+var flag4=1;
+live.addEventListener("click",function()
+{
+    overlay.style.pointerEvents = "initial";
+    if(flag4===1)
+    {    
+        live1.style.left = "0%";
+        live1.style.opacity="1";
+        flag4 = 0;
+        live1.style.left = "-100%";
+    }
+    else
+    {
+        live1.style.left = "-100%";
+        live1.style.transition =="all cubic-bezier(0.165, 0.84, 0.44, 1) 1s";
+        flag4 = 1;  
+    }
+})
+overlay.addEventListener("click",function()
+{
+        live1.style.left = "-100%";
+        live1.style.transition = "all cubic-bezier(0.165, 0.84, 0.44, 1) 1s";
         
 })
 
